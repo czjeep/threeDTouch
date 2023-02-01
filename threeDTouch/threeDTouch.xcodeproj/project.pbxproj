@@ -276,6 +276,7 @@
 				CURRENT_PROJECT_VERSION = 2023020101;
 				DEVELOPMENT_TEAM = C94329WK33;
 				INFOPLIST_FILE = threeDTouch/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -296,6 +297,7 @@
 				CURRENT_PROJECT_VERSION = 2023020101;
 				DEVELOPMENT_TEAM = C94329WK33;
 				INFOPLIST_FILE = threeDTouch/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
