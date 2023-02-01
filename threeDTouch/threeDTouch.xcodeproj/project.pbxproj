@@ -12,6 +12,7 @@
 		3AAA8C5520F6F17A0034754F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AAA8C5420F6F17A0034754F /* ViewController.swift */; };
 		3AAA8C5A20F6F17B0034754F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3AAA8C5920F6F17B0034754F /* Assets.xcassets */; };
 		3AAA8C5D20F6F17B0034754F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3AAA8C5B20F6F17B0034754F /* LaunchScreen.storyboard */; };
+		B893FE62328B68BF30E2976A /* Pods_threeDTouch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5A4D4056F7D6112215E593B /* Pods_threeDTouch.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,9 @@
 		3AAA8C5920F6F17B0034754F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3AAA8C5C20F6F17B0034754F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3AAA8C5E20F6F17B0034754F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		52ACBF5492B07D7F683BDD41 /* Pods-threeDTouch.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-threeDTouch.debug.xcconfig"; path = "Target Support Files/Pods-threeDTouch/Pods-threeDTouch.debug.xcconfig"; sourceTree = "<group>"; };
+		E5A4D4056F7D6112215E593B /* Pods_threeDTouch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_threeDTouch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EAB023EEC11AC6835B9E828B /* Pods-threeDTouch.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-threeDTouch.release.xcconfig"; path = "Target Support Files/Pods-threeDTouch/Pods-threeDTouch.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +33,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B893FE62328B68BF30E2976A /* Pods_threeDTouch.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +45,8 @@
 			children = (
 				3AAA8C5120F6F17A0034754F /* threeDTouch */,
 				3AAA8C5020F6F17A0034754F /* Products */,
+				FC9000495168053D975E9FBE /* Pods */,
+				CEE371FE1BBDC75C5E33590A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -64,6 +71,24 @@
 			path = threeDTouch;
 			sourceTree = "<group>";
 		};
+		CEE371FE1BBDC75C5E33590A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E5A4D4056F7D6112215E593B /* Pods_threeDTouch.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FC9000495168053D975E9FBE /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				52ACBF5492B07D7F683BDD41 /* Pods-threeDTouch.debug.xcconfig */,
+				EAB023EEC11AC6835B9E828B /* Pods-threeDTouch.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -71,6 +96,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3AAA8C6120F6F17B0034754F /* Build configuration list for PBXNativeTarget "threeDTouch" */;
 			buildPhases = (
+				34E5F45575B2B42B0756059F /* [CP] Check Pods Manifest.lock */,
 				3AAA8C4B20F6F17A0034754F /* Sources */,
 				3AAA8C4C20F6F17A0034754F /* Frameworks */,
 				3AAA8C4D20F6F17A0034754F /* Resources */,
@@ -128,6 +154,31 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		34E5F45575B2B42B0756059F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-threeDTouch-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		3AAA8C4B20F6F17A0034754F /* Sources */ = {
@@ -270,6 +321,7 @@
 		};
 		3AAA8C6220F6F17B0034754F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 52ACBF5492B07D7F683BDD41 /* Pods-threeDTouch.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -291,6 +343,7 @@
 		};
 		3AAA8C6320F6F17B0034754F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EAB023EEC11AC6835B9E828B /* Pods-threeDTouch.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
